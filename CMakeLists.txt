@@ -21,8 +21,14 @@ if(ENABLE_UNIT_TESTS)
   include(GoogleTest)
   gtest_discover_tests(main_test)
 endif()
+
 # executable target
-add_executable(project main.cpp)
+add_executable(project main.cpp hello.h hello.cpp)
+
+# benchmark
+add_subdirectory(third-party/benchmark)
+add_executable(hello_bm hello_bm.cpp hello.h hello.cpp)
+target_link_libraries(hello_bm benchmark::benchmark )
 
 # package
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
