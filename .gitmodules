@@ -1,6 +1,9 @@
 [submodule "third-party/googletest"]
-	path = third-party/googletest
+	path = third/googletest
 	url = git@github.com:google/googletest.git
 [submodule "third-party/benchmark"]
-	path = third-party/benchmark
+	path = third/benchmark
 	url = git@github.com:google/benchmark.git
+[submodule "third/glog"]
+	path = third/glog
+	url = git@github.com:google/glog.git

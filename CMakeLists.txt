@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 option(ENABLE_UNIT_TESTS "Enable unit tests" ON)
 message(STATUS "Enable testing: ${ENABLE_UNIT_TESTS}")
 if(ENABLE_UNIT_TESTS)
-  add_subdirectory(third-party/googletest)
+  add_subdirectory(third/googletest)
   enable_testing()
   
   add_executable(
@@ -26,7 +26,7 @@ endif()
 add_executable(project main.cpp hello.h hello.cpp)
 
 # benchmark
-add_subdirectory(third-party/benchmark)
+add_subdirectory(third/benchmark)
 add_executable(hello_bm hello_bm.cpp hello.h hello.cpp)
 target_link_libraries(hello_bm benchmark::benchmark )
 
